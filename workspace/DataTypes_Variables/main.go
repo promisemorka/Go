@@ -33,7 +33,7 @@ func main()  {
 	// fmt.Scanf("%s %t", &name, &is_muggle)
 	// fmt.Println(name, is_muggle)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	// ******** MULTIPLE INPUTS ***************
 
@@ -48,7 +48,7 @@ func main()  {
 	// fmt.Println("a: ", a)
 	// fmt.Println("b: ", b)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	// *********** FIND THE TYPE OF VARIABLE **********
 	var grades int = 32
@@ -66,7 +66,7 @@ func main()  {
 	fmt.Printf("Type: %v \n", reflect.TypeOf(46.0))
 	fmt.Printf("Type: %v \n", reflect.TypeOf(true))
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	var level int = 5
 	var sentence string = "Never give up"
@@ -74,7 +74,7 @@ func main()  {
 	fmt.Printf("variable level=%v is of type %v \n", level, reflect.TypeOf(level))
 	fmt.Printf("variable sentence='%v' is of type %v \n", sentence, reflect.TypeOf(sentence))
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	// *********** TYPE CASTING ******************
 	var age int = 24
@@ -85,13 +85,13 @@ func main()  {
 	var degreeInteger int = int(degree)
 	fmt.Printf("%v\n", degreeInteger)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	var temp int = 20
 	var tempStr = strconv.Itoa(temp) // Converts integer to string -> returns one value - the string formed with the given integer
 	fmt.Printf("%q\n", tempStr)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	var weight string = "115"
 	i, err := strconv.Atoi(weight) // Converts string to integer -> returns two values - the integer, and error (if any)
@@ -99,7 +99,7 @@ func main()  {
 	fmt.Printf("%v, %T \n", i, i)
 	fmt.Printf("%v, %T \n", err, err)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 	// ************ CONSTANTS ************
 	/*
@@ -120,7 +120,7 @@ func main()  {
 	fmt.Printf("%v: %T \n", is_playing_well, is_playing_well)
 	fmt.Printf("%v: %T \n", league_position, league_position)
 
-	fmt.Println("==================================")
+	fmt.Println("--------------------")
 
 
 }

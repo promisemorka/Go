@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(a > b)
 	fmt.Println(a >= b)
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ***** ARITHMETIC OPERATORS *****
 	var color,phone string = "blue", "iPhone"
@@ -26,7 +26,7 @@ func main() {
 	var temp,temp_two float64 = 79.33, 75.00
 	fmt.Printf("%.2f \n", temp - temp_two)
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	var length,breadth int = 12, 4
 	fmt.Println(length * breadth)
@@ -40,7 +40,7 @@ func main() {
 	i--
 	fmt.Println(i)
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ****** LOGICAL OPERATORS ********
 	var score int = 10
@@ -73,7 +73,7 @@ func main() {
     fg %= gh
     fmt.Println(fg)
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ***** BITWISE OPERATORS
 	var num4, numb5 int = 100,90
@@ -86,7 +86,7 @@ func main() {
 	var num8, num9 int = 100,90
     fmt.Println(!(((num8+num9) >> 2 ) == 47))
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ***** IF_ELSE AND ELSE IF STATEMENTS ******
 	var mood string = "happy"
@@ -111,7 +111,7 @@ func main() {
 		fmt.Println("I love to drive")
 	}
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ********* SWITCH STATEMENT **********
 	var j int = 100
@@ -151,14 +151,14 @@ func main() {
 			fmt.Println("Greater than 30")
 	}
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// ****** LOOPING WITH FOR ******
 	for i := 1; i <= 5; i++ {
 		fmt.Println(i)
 	}
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	// NB: The initialization and post statements are optional in Go
 	ii := 1
@@ -167,7 +167,7 @@ func main() {
 		ii += 1
 	}
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 
 	for i := 1; i <= 5; i++ {
 		if i == 3 {
@@ -176,7 +176,7 @@ func main() {
 		fmt.Println(i)
 	}
 
-	fmt.Println("========================")
+	fmt.Println("--------------------")
 	for i := 1; i <= 5; i++ {
 		if i == 3 {
 			continue
