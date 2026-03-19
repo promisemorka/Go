@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// ***** Arrays *****
+// ***** ARRAYS *****
 //  . fixed length. It denotes the number of elements in the array
 //  . capacity - This denotes the number of elements it can contain
 // . In the case of arrays, length and capacity are the same
@@ -198,4 +198,75 @@ func main() {
 	for _, value := range source_slice {
 		fmt.Println(value)
 	}
+
+	// ***** MAPS *****
+	// . Unordered collection of key/value pairs
+	// . Implemented by hash tables
+	// . Provide efficient add, get and delete operations
+
+	/* declaring and initialzing a map:
+	 var <map_name> map[<key_data_type>]<value_data_type>
+	 e.g var my_map map[string]int --> this line of code creates a nil map
+	 The zero value of the map is nil, and the nil map does not contain any keys
+	 Trying to add a value to a nil map makes the compiler throw an error
+	*/
+
+	fmt.Println("--------- Maps ---------")
+	// var codes map[string]string // Creates a nil map
+	// codes["en"] = "English"
+	// fmt.Println(codes)
+
+	codes_map := map[string]string{"en": "English", "fr": "French"}
+	fmt.Println(codes_map)
+	fmt.Println(len(codes_map))
+
+	// using a make() function
+	/* <map_name> := 
+	    make(map[<key_data_type>]<value_data_type, <initial_capacity>)
+	 NB: the initial_capacity is optional
+	*/
+
+	empty_codes_map := make(map[string]int)
+	fmt.Println(empty_codes_map) // Prints an empty map
+
+	// Accessing a map i.e map[key]
+	fmt.Println(codes_map["en"])
+	fmt.Println(codes_map["fr"])
+
+	// getting a key -> getting the value associated with the key
+	// value, found := map_name[key]
+	codes_map_nums := map[string]int{"en": 1, "fr": 2, "hi": 3}
+	value, found := codes_map_nums["en"]
+	fmt.Println(value, found) // Prints: 1 true
+
+	value2, found2 := codes_map_nums["hh"]
+	fmt.Println(value2, found2) // Prints: 0 false
+
+	// Add key-value pair
+	codes_map["it"] = "Italian"
+	fmt.Println(codes_map)
+
+	// Update ke-value pair
+	codes_map["en"] = "English Language"
+	fmt.Println(codes_map)
+
+	// delete a key-value pair
+	delete(codes_map, "en")
+	fmt.Println(codes_map)
+
+	fmt.Println("--------- Loop over a map ---------")
+	// Looping over a map 
+	for key, value := range codes_map {
+		fmt.Println(key, "=>", value)
+	}
+
+	// truncate a map i.e clearing alll elements in a map
+	// method 1
+	for key, _ := range codes_map {
+		delete(codes_map, key)
+	}
+	fmt.Println(codes_map)
+
+	// method 2 i.e simply initialize it with an empty map
+	codes_map = make(map[string]string)
 }
